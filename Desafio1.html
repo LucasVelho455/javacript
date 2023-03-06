@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <title>gremio não tem mundial</title>
+</head>
+<body>
+<script>
+var totalVotantes = parseInt(prompt('Digite o número total de votantes:'));
+var votosCandidato1 = 0;
+var votosCandidato2 = 0;
+var votosCandidato3 = 0;
+
+for (var i = 1; i <= totalVotantes; i++) {
+  const voto = parseInt(prompt("Votante"+i+", digite o número do seu candidato (1, 2 ou 3):"))
+  
+  if (voto === 1) {
+    votosCandidato1++;
+  } else if (voto === 2) {
+    votosCandidato2++;
+  } else if (voto === 3) {
+    votosCandidato3++
+  } else {
+    alert('Voto inválido. Por favor, digite 1, 2 ou 3.');
+    i--;
+  }
+}
+
+alert("Resultado da eleição: \nCandidato 1 - "+votosCandidato1+"votos \nCandidato 2 -"+votosCandidato2+"votos \nCandidato 3 -"+votosCandidato3+" votos.")
+
+</script>
+</body>
+</html>
