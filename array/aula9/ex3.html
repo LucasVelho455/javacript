@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <title>gremio não tem mundial</title>
+</head>
+<body>
+  <script>
+     var vetor = new Array(10)
+     var total = 0
+     var pagamneto
+     for(var i = 0; i < vetor.length; i++){
+
+        vetor[i] = new Array (prompt("digite 10 numeros "+i))
+        vetor[i] = parseInt(vetor[i])
+
+        total += vetor[i]
+
+        document.write("R$"+vetor[i]+"<br>")
+     } 
+     document.write("<br>  "+"Valor total dos produtos R$"+total)
+
+     pagamneto = prompt("Pagamento débito ou creditoo - digite sim para credito, e digite d para debito")
+     if(pagamento === "sim"){
+         document.write("Credito")
+
+     }  else {
+      document.write("Debito")
+     }
+  </script>
+</body>
+</html>
