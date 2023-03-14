@@ -1,6 +1,8 @@
 * body{
     margin: 0px;
     padding: 0px;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Josefin Sans', sans-serif;
 }#topo {
     width: 960px; /* Largura */
     height: 100px; /* Altura */
@@ -15,15 +17,27 @@
     height: 200px;
     background-color: rgb(255, 0, 0);
     float: left;
+} #logo img {
+    width: 260px;
+    height: 200px;
+    float: left;
 } #menu {
     width: 700px;
-    height: 200px;
-    background-color: rgb(222, 222, 222);
+    height: 80px;
     float: right;
-} #banner{
+    text-align: center;
+    word-spacing: 20px;
+    color: rgb(255, 0, 0);
+    margin-top: 50px ;
+} #menu a {
+    text-decoration: none;
+} #menu a :hover{
+  color: rgb(4, 0, 237);
+}
+ #banner{
     width: 960px;
     height: 500px;
-    background-color: rgb(155, 0, 0);
+    background-color: rgb(0, 155, 13);
     margin: auto;
 } #propaganda {
     width: 960px;
