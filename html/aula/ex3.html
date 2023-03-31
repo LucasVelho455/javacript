@@ -105,9 +105,8 @@
                                 <button class="btn-btn-primary" input type="reset">Cancelar</button>
                         </form>
                     </div>
-                    
-                    <script>
 
+                    <script>
                         function validadandoForm() {
                             var nome = document.getElementById("nome").value
                             var cpf = document.getElementById("cpf").value
@@ -115,10 +114,18 @@
                             var nivel = document.getElementById("nivel").value
                             var email = document.getElementById("email").value
                             var senha = document.getElementById("senha").value
-                            var senha = document.getElementById("status").value
+                            var status = document.getElementById("status").value
+                            var recebe = ''
 
-                            document.write(nome + '  ' + cpf + '  ' + endereco + '  ' + nivel + '  ' + email + '  ' +
-                                senha + '  ' + status)
+                            if (nome === ''+ cpf === ''+ endereco === ''+ nivel === ''+ email === ''+ senha === ''+ status === '') {
+                                alert('prencha todos os campos')
+                            } else {
+
+                                document.write(nome + '  ' + cpf + '  ' + endereco + '  ' + nivel + '  ' + email +
+                                    '  ' +
+                                    senha + '  ' + status)
+                            }
+
                         }
                     </script>
 
