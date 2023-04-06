@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>Olá, mundo!</title>
+</head>
+
+<body>
+    <div id="app">
+        {{ola}}
+        <br>
+        {{senac}}
+        <br>
+        {{numero}}
+        <br>
+        {{logico}}
+
+        <button @click="logico =!logico"> cliclar </button>
+
+        <h1 v-if="logico"> ok </h1>
+
+        <h1 v-else> Não </h1>
+
+        <div v-if="type === 'A'"> correto</div>
+        <div v-else-if="type === 'B'">B</div>
+        <div v-else-if="type === 'C'">C</div>
+        <div v-else> nenhum dos Elementos </div>
+
+        <div v-show="ok"> aparece </div>
+        <ul>
+            <li v-for="(value,key,index) in objeto">
+                {{value}} - {{key}} - {{index}}
+
+
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    ola: 'Olá Vue.js',
+
+                    senac: 'Caxias do sul',
+
+                    numero: 20,
+
+                    logico: true,
+
+                    type: 'A',
+
+                    ok: 'ok',
+
+                    objeto: {
+                        nome: 'teste',
+                        autor: 'senac',
+                        data: '16-08-2023'
+                    }
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>
