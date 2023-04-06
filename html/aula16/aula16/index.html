@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <form method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Digite seu Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu Nome">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Digite seu email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Seu Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Pais</label>
+                <select class="form-control" id="pais" name="pais">
+                    <option> </option>
+                    <option>Brasil</option>
+                    <option>Ucrânia</option>
+                    <option>Argetina</option>
+                    <option>chile</option>
+                </select>
+            </div>
+            <button type="submit" onclick="imprimirNome()" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function imprimirNome() {
+            var nome = document.getElementById('nome').value
+            var email = document.getElementById('email').value
+            var pais = document.getElementById('pais').value
+
+            if (nome === '') {
+                alert('Preencha todos os campos')
+            } else if (email === '') {
+                alert('Preencha todos os campos')
+            } else if (pais === '') {
+                alert('Preencha todos os campos')
+            } else {
+                document.write(nome + '' + email + '' + pais)
+            }
+
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

@@ -77,10 +77,8 @@
                                 <div class="form-group col-md-2">
                                     <label for="inputEstado">Nível</label>
                                     <select id="nivel" class="form-control">
-                                        <option selected>Escolher</option>
                                         <option selected>Admin</option>
                                         <option selected>Padrão</option>
-                                        <option>...</option>
                                     </select>
                                 </div>
                                 <div class="col-md-7 mb-3">
@@ -94,18 +92,21 @@
                                 <div class="form-group col-md-2">
                                     <label for="inputEstado">Status: </label>
                                     <select id="status" class="form-control">
-                                        <option selected>Escolher</option>
                                         <option selected>Ativo</option>
                                         <option selected>Desativo</option>
-                                        <option>...</option>
                                     </select>
                                 </div>
-                                <button class="btn-btn-primary" onclick="validadandoForm()"
-                                    type="submit">Enviar</button>
-                                <button class="btn-btn-primary" input type="reset">Cancelar</button>
+                                
                         </form>
                     </div>
-
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12"></div>
+                            <button class="btn-btn-primary" onclick="validadandoForm()"
+                                    type="submit" align="center">Enviar</button>
+                                <button class="btn-btn-primary" input type="reset">Cancelar</button>
+                        </div>
+                    </div>
                     <script>
                         function validadandoForm() {
                             var nome = document.getElementById("nome").value
@@ -117,7 +118,8 @@
                             var status = document.getElementById("status").value
                             var recebe = ''
 
-                            if (nome === ''+ cpf === ''+ endereco === ''+ nivel === ''+ email === ''+ senha === ''+ status === '') {
+                            if (nome === '' + cpf === '' + endereco === '' + nivel === '' + email === '' + senha ===
+                                '' + status === '') {
                                 alert('prencha todos os campos')
                             } else {
 
@@ -128,7 +130,6 @@
 
                         }
                     </script>
-
                     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
                         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
                         crossorigin="anonymous">
